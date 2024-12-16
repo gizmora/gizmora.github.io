@@ -1,5 +1,5 @@
 // src/index.js
-import './style.css';
+import './style.scss';
 
 const heading = document.createElement('h1');
 heading.textContent = 'Welcome to my Portfolio!';
