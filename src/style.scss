@@ -1,10 +1,11 @@
 body {
   font-family: sans-serif;
   margin: 0;
+  background-color: #191c20;
+  color: #d7d8db;
 
   h1 {
     text-align: center;
-    color: white;
     font-size: 20px;
   }
 
@@ -12,6 +13,24 @@ body {
     display: flex;
     position: sticky;
     height: 40px;
-    background-color: black;
+    background-color: #191c20;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(78, 88, 100, 0.25);
+  }
+  
+  .main {
+    border: 1px solid rgba(78, 88, 100, 0.25);
+    min-height: 300px;
+    margin: 20px auto;
+    width: 40%;
+    justify-items: center;
+  }
+
+  .content {
+    background-color:rgb(33 36 41);
+    min-height: 60px;
+    border-bottom-color: rgb(61, 68, 77);
+    width: 95%;
+    margin: 12px;
   }
 }
