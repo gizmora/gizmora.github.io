@@ -35,7 +35,6 @@ span {
 }
 
 .main {
-  border: 1px solid $border-main-color;
   margin: 20px auto;
   width: 1200px;
   justify-items: center;
@@ -48,8 +47,9 @@ span {
 .content {
   background-color:rgb(33 36 41);
   min-height: 60px;
-  border-bottom-color: rgb(61, 68, 77);
+  border: 1px solid $border-main-color;
   padding: 12px;
+  margin-bottom: 12px;
 
   .overview {
     
@@ -65,4 +65,12 @@ span {
   height: 80px;
   position: relative;
   background-color: white;
+}
+
+.name-tag {
+  margin-bottom: 24px;
+}
+
+.about {
+  margin-bottom: 50px;
 }
