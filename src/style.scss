@@ -13,12 +13,12 @@ body {
 
 span {
   &.heading {
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 12px;
   }
 
   &.sub {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -54,7 +54,7 @@ span {
   .overview {
     
     p, ul, li {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
@@ -82,7 +82,7 @@ span {
     display: flex;
     flex-direction: row;
     margin: 24px 0px;
-    font-size: 10px;
+    font-size: 12px;
     column-gap: 36px;
   }
 
@@ -110,6 +110,10 @@ span {
   }
 
   .levels {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    
     .title + .level {
       margin-left: 12px;
     }
@@ -120,13 +124,15 @@ span {
     font-size: 12px;
     word-break: break-word;
     color: #7e7e7e;
+    display: flex;
+    align-items: center;
   }
   
   .level::before {
     content:"";
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 5px;
+    width: 5px;
     margin-right: 5px;
     background-color: white;
   }
