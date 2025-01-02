@@ -36,7 +36,7 @@ span {
 
 .main {
   margin: 20px auto;
-  width: 80%;
+  width: 800px;
   justify-items: center;
 }
 
@@ -113,7 +113,7 @@ span {
     display: flex;
     flex-direction: row;
     column-gap: 8px;
-    
+
     .title + .level {
       margin-left: 12px;
     }
