@@ -1,11 +1,22 @@
 $border-main-color: rgba(78, 88, 100, 0.25);
 $body-font: Noto Sans, serif;
 
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+  --color-bg: #191c20;
+  --color-fg: #d7d8db;
+}
+
 body {
   font-family: $body-font;
   margin: 0;
   padding: 0;
-  background-color: #191c20;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   color: #d7d8db;
   height: auto;
   width: auto;
