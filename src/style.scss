@@ -191,3 +191,9 @@ span {
     }
   }
 }
+
+button[data-theme-toggle] {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  border-color: var(--color-bg) !important;
+}
