@@ -50,7 +50,7 @@ span {
 
 .main {
   margin: 20px auto;
-  width: 800px;
+  width: 1200px;
   justify-items: center;
 }
 
@@ -188,6 +188,16 @@ span {
 
     &.spacer {
       margin-top: 12px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    column-count: 3;
+    list-style-position: inside;
+
+    ul {
+      column-count: 1;
     }
   }
 }
