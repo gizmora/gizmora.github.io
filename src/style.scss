@@ -144,11 +144,13 @@ span {
   
   .level::before {
     content:"";
-    display: inline-block;
     height: 5px;
     width: 5px;
     margin-right: 5px;
     background-color: white;
+    position: absolute; 
+    left: 0px;
+    top: 6px;
   }
 
   .recreational::before {
@@ -199,11 +201,16 @@ span {
 
     ul {
       column-count: 1;
+
+      li {
+        padding-left: 10px;
+      }
     }
 
     li {
       list-style: none;
       break-inside: avoid;
+      position: relative;
     }
   }
 }

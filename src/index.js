@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let item = '';
 
     section.subsections.forEach(subsection => {
-      item += `<li><span class="level ${subsection.level}">${subsection.name}</span></li>`;
+      item += `<li class="level ${subsection.level}">${subsection.name}</li>`;
     });
 
     subList.innerHTML = item;
