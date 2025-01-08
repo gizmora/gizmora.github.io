@@ -139,7 +139,7 @@ span {
     word-break: break-word;
     color: #7e7e7e;
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
   
   .level::before {
@@ -177,7 +177,7 @@ span {
     min-width: 130px;
   }
 
-  .technologies {
+  #technologies {
     display: flex;
   }
 
@@ -192,12 +192,18 @@ span {
   }
 
   ul {
-    list-style: none;
-    column-count: 3;
+    column-count: 6;
     list-style-position: inside;
+    padding: 0;
+    margin: 0;
 
     ul {
       column-count: 1;
+    }
+
+    li {
+      list-style: none;
+      break-inside: avoid;
     }
   }
 }
@@ -205,5 +211,5 @@ span {
 button[data-theme-toggle] {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  border-color: var(--color-bg) !important;
+  border-style: none;
 }

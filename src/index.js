@@ -1,4 +1,5 @@
 import './style.scss';
+import sections from './data/tech.json';
 
 function setColorTheme({ localStorageTheme, systemSettingDark }) {
   if (localStorageTheme !== null) {
@@ -28,7 +29,7 @@ function updateThemeOnHtmlEl({ theme }) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const button = document.querySelector("[data-theme-toggle]");
+  const button = document.querySelector("[data-theme-toggle]"); 
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -46,5 +47,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     currentThemeSetting = newTheme;
   });
+
+  const skillsContainer = document.getElementById('technologies');
+  let sectionList = document.createElement('ul');
+
+  sections.forEach((section) => {
+    let subList = document.createElement('ul');
+    let item = '';
+
+    section.subsections.forEach(subsection => {
+      item += `<li><span class="level ${subsection.level}">${subsection.name}</span></li>`;
+    });
+
+    subList.innerHTML = item;
+
+    let li = `<li>
+      <span class="area">${section.name}</span>
+      ${subList.outerHTML}
+    </li>`;
+
+    sectionList.innerHTML += li;
+  });
+
+  skillsContainer.appendChild(sectionList);
 });
 
