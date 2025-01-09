@@ -131,6 +131,32 @@ span {
     .title + .level {
       margin-left: 12px;
     }
+
+    li {
+      padding-left: 10px;
+    }
+  }
+
+  .legend {
+    font-weight: normal;
+    font-size: 12px;
+    word-break: break-word;
+    color: #7e7e7e;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    padding-left: 14px;
+  }
+
+ .legend::before {
+    content:"";
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    background-color: white;
+    position: absolute; 
+    left: 0px;
+    top: 3px;
   }
   
   .level {
