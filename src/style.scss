@@ -25,12 +25,12 @@ body {
 
 span {
   &.heading {
-    font-size: 16px;
+    font-size: 24px;
     margin-right: 12px;
   }
 
   &.sub {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -96,7 +96,7 @@ span {
     display: flex;
     flex-direction: row;
     margin: 24px 0px;
-    font-size: 12px;
+    font-size: 14px;
     column-gap: 36px;
   }
 
@@ -139,7 +139,7 @@ span {
 
   .legend {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     word-break: break-word;
     color: #7e7e7e;
     display: flex;
@@ -161,7 +161,7 @@ span {
   
   .level {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     word-break: break-word;
     color: #7e7e7e;
     display: flex;
@@ -230,6 +230,7 @@ span {
 
       li {
         padding-left: 10px;
+        margin: 0px;
       }
     }
 
@@ -237,6 +238,7 @@ span {
       list-style: none;
       break-inside: avoid;
       position: relative;
+      margin: 0px 0px 12px;
     }
   }
 }
