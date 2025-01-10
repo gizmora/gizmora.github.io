@@ -1,0 +1,20 @@
+[
+  {
+    "date": "Nov 2021 - present",
+    "position": "Web Developer",
+    "company": "Cognizant Technology Solutions",
+    "description": "Transform spreadsheets into dashboards and websites for behavior, output and performance monitoring. Sometimes do some small automation tasks and chrome extensions."
+  },
+  {
+    "date": "Aug 2018 - Aug 2021",
+    "position": "Analyst Developer",
+    "company": "GMA New Media Inc.",
+    "description": "Full stack web development for their news publishing department. Revamped their analytics dashboard to use modern framework and infrastructure. SEO and ad related task for accurate ad impressions and improved SERP rankings."
+  },
+  {
+    "date": "Jun 2017 - Aug 2017",
+    "position": "Financial Services and Risk Management Intern",
+    "company": "SGV & Co. (member firm of Ernst & Young)",
+    "description": "Research and development on smart contracts using Solidity (Ethereum)."
+  }
+]
