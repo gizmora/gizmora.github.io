@@ -1,11 +1,2 @@
-Portfolio:
-  ☐ Prototype 1
-  ☐ Study UI/UX
-    ☐ Checkout designs
-
-Sections:
-  ✔ Profile info @done(25-01-07 23:55)
-  ✔ Work experience @done(25-01-07 23:47)
-  ☐ Tech stack
-    ☐ Refactor code to dynamic
-  ☐ Past works
+Revamp Portfolio:
+  ☐ Remove old code @started(25-03-10 23:54)
