@@ -1,0 +1,68 @@
+:root {
+  --font-family-base: "Noto Sans", sans-serif;
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-size-base: 16px;
+  --font-size-heading-1: 2.5rem;
+  --font-weight-bold: 700;
+
+  --theme-primary: #007bff;
+  --theme-secondary: #6c757d;
+  --theme-background: #f8f9fa;
+  --theme-text: #333;
+  --theme-border: #ddd;
+
+  --theme-success: #28a745;
+  --theme-warning: #ffc107;
+  --theme-error: #dc3545;
+
+  --layout-spacing: 1rem;
+  --layout-spacing-small: 0.5rem;
+  --layout-spacing-large: 2rem;
+  --layout-border-radius: 0.25rem;
+  --layout-max-width: 1200px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme Variables */
+    --theme-primary: #64b5f6;
+    --theme-secondary: #9e9e9e;
+    --theme-background: #121212;
+    --theme-text: #e0e0e0;
+    --theme-border: #424242;
+  }
+}
+
+
+body {
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  padding: var(--layout-spacing);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+}
+
+p, div, span {
+  font-family: var(--main-font);
+  font-weight: var(--main-font-weight);
+}
+
+
+.button.primary {
+    background-color: var(--theme-primary);
+    border-color: var(--theme-primary);
+    color: white;
+    border-radius: var(--layout-border-radius);
+    padding: var(--layout-spacing-small) var(--layout-spacing);
+}
+
+.error{
+    color: var(--theme-error);
+    border: 1px solid var(--theme-error);
+    padding: var(--layout-spacing-small);
+}
