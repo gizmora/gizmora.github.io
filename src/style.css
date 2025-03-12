@@ -47,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--heading-font-weight);
 }
 
+h1 {
+  font-size: 36px;
+}
+
 p, div, span {
   font-family: var(--main-font);
   font-weight: var(--main-font-weight);
@@ -54,15 +58,54 @@ p, div, span {
 
 
 .button.primary {
-    background-color: var(--theme-primary);
-    border-color: var(--theme-primary);
-    color: white;
-    border-radius: var(--layout-border-radius);
-    padding: var(--layout-spacing-small) var(--layout-spacing);
+  background-color: var(--theme-primary);
+  border-color: var(--theme-primary);
+  color: white;
+  border-radius: var(--layout-border-radius);
+  padding: var(--layout-spacing-small) var(--layout-spacing);
 }
 
-.error{
-    color: var(--theme-error);
-    border: 1px solid var(--theme-error);
-    padding: var(--layout-spacing-small);
+.error {
+  color: var(--theme-error);
+  border: 1px solid var(--theme-error);
+  padding: var(--layout-spacing-small);
+}
+
+header {
+  max-width: 720px;
+  margin: auto;
+  
+  a {
+    text-decoration: none;
+    color: var(--theme-text);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      width: 25%;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+  }
+}
+
+main {
+  max-width: 720px;
+  margin: auto;
+}
+
+footer {
+  max-width: 720px;
+  margin: auto;
 }
