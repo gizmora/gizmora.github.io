@@ -2,7 +2,14 @@
   --font-family-base: "Noto Sans", sans-serif;
   --font-family-heading: 'Montserrat', sans-serif;
   --font-size-base: 16px;
-  --font-size-heading-1: 2.5rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.3125rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.652rem;
+  --font-size-4xl: 4rem;
   --font-weight-bold: 700;
 
   --theme-primary: #007bff;
@@ -19,7 +26,7 @@
   --layout-spacing-small: 0.5rem;
   --layout-spacing-large: 2rem;
   --layout-border-radius: 0.25rem;
-  --layout-max-width: 1200px;
+  --layout-max-width: 36rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,19 +50,42 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  font-weight: var(--heading-font-weight);
+  font-family: var(--font-family-heading);
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: var(--font-size-2xl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
+}
+
+h5 {
+  font-size: var(--font-size-sm);
+}
+
+h6 {
+  font-size: var(--font-size-xs);
 }
 
 p, div, span {
-  font-family: var(--main-font);
-  font-weight: var(--main-font-weight);
+  font-family: var(--font-family-base);
 }
 
+p {
+  font-size: var(--font-size-md);
+  margin: 2rem 0rem;
+}
 
 .button.primary {
   background-color: var(--theme-primary);
@@ -72,20 +102,24 @@ p, div, span {
 }
 
 header {
-  max-width: 720px;
+  max-width: var(--layout-max-width);
   margin: auto;
   
   a {
     text-decoration: none;
-    color: var(--theme-text);
+    color: var(--theme-secondary);
   }
 
   nav {
     display: flex;
     align-items: center;
 
-    h1 {
+    h1 a{
       width: 25%;
+    }
+
+    h1 a {
+      color: white;
     }
 
     ul {
@@ -101,11 +135,20 @@ header {
 }
 
 main {
-  max-width: 720px;
+  max-width: var(--layout-max-width);
   margin: auto;
+
+  h2 {
+    margin: 2.5rem 0rem;
+  }
 }
 
 footer {
-  max-width: 720px;
+  max-width: var(--layout-max-width);
   margin: auto;
+  padding: 2.5rem 0rem;
+}
+
+.sub { 
+  color: var(--theme-secondary);
 }
