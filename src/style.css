@@ -105,21 +105,19 @@ header {
   max-width: var(--layout-max-width);
   margin: auto;
   
-  a {
-    text-decoration: none;
-    color: var(--theme-secondary);
-  }
-
   nav {
     display: flex;
     align-items: center;
+    padding: 1rem 0;
 
-    h1 a{
-      width: 25%;
-    }
-
-    h1 a {
-      color: white;
+    a {
+      text-decoration: none;
+      color: var(--theme-secondary);
+  
+      span {
+        font-size: 1.25rem;
+        color: white;
+      }
     }
 
     ul {
@@ -138,7 +136,7 @@ main {
   max-width: var(--layout-max-width);
   margin: auto;
 
-  h2 {
+  h1 {
     margin: 2.5rem 0rem;
   }
 }
@@ -151,4 +149,10 @@ footer {
 
 .sub { 
   color: var(--theme-secondary);
+}
+
+.projects-wrapper {
+  img {
+    width: 250px;
+  }
 }
