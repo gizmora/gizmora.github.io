@@ -60,6 +60,7 @@ h1 {
 
 h2 {
   font-size: var(--font-size-xl);
+  margin: 2rem 0px;
 }
 
 h3 {
@@ -154,5 +155,12 @@ footer {
 .projects-wrapper {
   img {
     width: 250px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out; 
+  }
+
+  img:hover {
+    object-fit: contain;
   }
 }
