@@ -162,30 +162,7 @@ footer {
 }
 
 .legends {
-  padding: 24px 0px;
-
-  ul {
-    column-count: 6;
-    list-style-position: inside;
-    padding: 0;
-    margin: 0;
-  
-    ul {
-      column-count: 1;
-  
-      li {
-        padding-left: 10px;
-        margin: 0px;
-      }
-    }
-  
-    li {
-      list-style: none;
-      break-inside: avoid;
-      position: relative;
-      margin: 0px 0px 12px;
-    }
-  }
+  padding-bottom: 24px;
 }
 
 .levels {
@@ -204,7 +181,7 @@ footer {
 
 .legend {
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   word-break: break-word;
   color: #7e7e7e;
   display: flex;
@@ -226,7 +203,7 @@ footer {
 
 .level {
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   word-break: break-word;
   color: #7e7e7e;
   display: flex;
@@ -272,6 +249,29 @@ footer {
 
 #technologies {
   display: flex;
+
+  ul {
+    column-count: 3;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+  
+    ul {
+      column-count: 1;
+  
+      li {
+        padding-left: 10px;
+        margin: 0px;
+      }
+    }
+  
+    li {
+      list-style: none;
+      break-inside: avoid;
+      position: relative;
+      margin: 0px 0px 12px;
+    }
+  }
 }
 
 .area {
