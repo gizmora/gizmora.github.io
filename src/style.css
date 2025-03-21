@@ -56,6 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--font-size-2xl);
+  font-family: 'Courier New', Courier, monospace;
+  display: inline;
 }
 
 h2 {
@@ -136,10 +138,6 @@ header {
 main {
   max-width: var(--layout-max-width);
   margin: auto;
-
-  h1 {
-    margin: 2.5rem 0rem;
-  }
 }
 
 footer {
@@ -284,3 +282,70 @@ footer {
   }
 }
 
+.terminal_emulator__field,
+.terminal_emulator__command {
+  
+  position: relative;
+  
+  padding-right: 1rem;
+  margin: 2.5rem 0px;
+  
+  &:before,
+  &:after {
+    position: absolute;
+  }
+  
+}
+
+.terminal_emulator__field {
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.5em;
+  box-sizing: border-box;
+  overflow: hidden;
+  &:after {
+    right: 0;
+    bottom: 0.25em;
+    
+    content:"";
+    width: 1rem;
+    height: 1px;
+    background:#ffffff;
+  
+    animation: caretBlink 1s infinite;
+  }
+}
+
+.line {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(30, end);
+  /* display: block !important; */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+
+@keyframes caretBlink {
+  0% {
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0;
+  }
+  
+  51% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
