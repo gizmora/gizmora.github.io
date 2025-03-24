@@ -26,7 +26,7 @@
   --layout-spacing-small: 0.5rem;
   --layout-spacing-large: 2rem;
   --layout-border-radius: 0.25rem;
-  --layout-max-width: 36rem;
+  --layout-max-width: 40rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -117,19 +117,20 @@ header {
   ul {
     justify-content: flex-end;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 header, footer {
   a {
-    text-decoration: none;
     color: var(--theme-secondary);
 
     span {
       font-size: 1.25rem;
       color: white;
     }
-
-
   }
 
   ul {
@@ -150,10 +151,14 @@ main {
 footer {
   max-width: var(--layout-max-width);
   margin: auto;
-  padding: 2.5rem 0rem;
+  padding: 3rem 0rem 0.5rem 0rem;
   
   p {
     margin: 0.5rem 0;
+  }
+
+  a {
+    color: white;
   }
 }
 
