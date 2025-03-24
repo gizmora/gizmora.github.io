@@ -112,26 +112,33 @@ header {
     display: flex;
     align-items: center;
     padding: 1rem 0;
+  }
 
-    a {
-      text-decoration: none;
-      color: var(--theme-secondary);
-  
-      span {
-        font-size: 1.25rem;
-        color: white;
-      }
+  ul {
+    justify-content: flex-end;
+  }
+}
+
+header, footer {
+  a {
+    text-decoration: none;
+    color: var(--theme-secondary);
+
+    span {
+      font-size: 1.25rem;
+      color: white;
     }
 
-    ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      flex: 1;
-      justify-content: flex-end;
-      gap: 24px;
-    }
+
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    gap: 24px;
+    list-style: none;
   }
 }
 
@@ -144,6 +151,10 @@ footer {
   max-width: var(--layout-max-width);
   margin: auto;
   padding: 2.5rem 0rem;
+  
+  p {
+    margin: 0.5rem 0;
+  }
 }
 
 .sub { 
@@ -348,4 +359,8 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+.footer-icons {
+  width: 25px;
 }
