@@ -369,3 +369,8 @@ footer {
 .footer-icons {
   width: 25px;
 }
+
+img.avatar {
+  width: 250px;
+  border-radius: 50px;
+}

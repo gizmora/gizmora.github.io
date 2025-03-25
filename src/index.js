@@ -114,3 +114,14 @@ sections.forEach((section) => {
 });
 
 skillsContainer.appendChild(sectionList);
+
+
+const navigationHeader = `<nav>
+    <a href="/"><span>gizmora</span></a>
+    <ul>
+      <li><a href="/about/">about</a></li>
+      <li><a href="/projects/">projects</a></li>  
+      <li><a href="/contact/">contact</a></li>
+      <li><a href="/now/">/now</a></li>
+    </ul>
+  </nav>`;
