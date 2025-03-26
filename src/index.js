@@ -116,7 +116,8 @@ sections.forEach((section) => {
 skillsContainer.appendChild(sectionList);
 
 
-const navigationHeader = `<nav>
+const headerHtml = `<header>
+  <nav>
     <a href="/"><span>gizmora</span></a>
     <ul>
       <li><a href="/about/">about</a></li>
@@ -124,4 +125,31 @@ const navigationHeader = `<nav>
       <li><a href="/contact/">contact</a></li>
       <li><a href="/now/">/now</a></li>
     </ul>
-  </nav>`;
+  </nav>
+</header>`;
+
+const footerHtml = `<footer>
+  <div class="links">
+    <p><a href="https://github.com/gizmora" target="_blank"><img src="/public/assets/github_white.png" class="footer-icons"></a></p>
+    <p><a href="/about">about</a> · <a href="/projects">projects</a> · <a href="/contact">contact</a> · <a href="/now">/now</a></p>
+    <p class="sub">&copy; ${new Date().getFullYear()} Grace Irene Mora</p>
+  </div>
+</footer>`;
+
+
+class MyHeader extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = headerHtml;
+  }
+}
+
+class MyFooter extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = footerHtml;
+  }
+}
+
+customElements.define('my-header', MyHeader);
+customElements.define('my-footer', MyFooter);
