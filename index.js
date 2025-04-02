@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <ul>
         <li><a href="/about/">about</a></li>
         <li><a href="/projects/">projects</a></li>
-        <li><a href="/contact/">contact</a></li>
         <li><a href="/now/">/now</a></li>
       </ul>
     </nav>
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const footerHtml = `<div>
     <div class="links">
       <p><a href="https://github.com/gizmora" target="_blank"><img src="/public/assets/github_white.png" class="footer-icons"></a></p>
-      <p><a href="/about">about</a> · <a href="/projects">projects</a> · <a href="/contact">contact</a> · <a href="/now">/now</a></p>
+      <p><a href="/about">about</a> · <a href="/projects">projects</a> · <a href="/now">/now</a></p>
       <p class="sub">&copy; ${new Date().getFullYear()} Grace Irene Mora</p>
     </div>
   </div>`;
