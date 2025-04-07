@@ -138,6 +138,14 @@ header, footer {
       font-size: 1.25rem;
       color: white;
     }
+
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a:hover {
+    color: white;
   }
 
   ul {
@@ -162,10 +170,6 @@ footer {
   
   p {
     margin: 0.5rem 0;
-  }
-
-  a {
-    color: white;
   }
 }
 
