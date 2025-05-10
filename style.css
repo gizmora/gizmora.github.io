@@ -27,6 +27,8 @@
   --layout-spacing-large: 2rem;
   --layout-border-radius: 0.25rem;
   --layout-max-width: 40rem;
+
+  --link-color: #6eb8ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,7 +56,7 @@ h2,
 h3, 
 h4, 
 h5, 
-  h6 {
+h6 {
   font-family: var(--font-family-heading);
   font-weight: normal;
 }
@@ -95,6 +97,10 @@ span {
 p {
   font-size: var(--font-size-md);
   margin: 2rem 0rem;
+}
+
+a {
+  color: var(--link-color);
 }
 
 .button.primary {
