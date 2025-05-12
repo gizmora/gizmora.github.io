@@ -315,6 +315,20 @@ footer {
   }
 }
 
+.title {
+  position: relative;
+  padding-right: 1rem;
+  margin: 2.5rem 0px;
+}
+
+/* .terminal_emulator__field {
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.5em;
+  box-sizing: border-box;
+  overflow: hidden;
+} */
+
 .footer-icons {
   width: 25px;
 }
