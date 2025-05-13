@@ -1,4 +1,40 @@
 (() => {
+  const typeAnimation = function (title) {
+    let ctr = 0;
+    let isTag = false;
+    let titleText = title.innerHTML;
+    title.innerHTML = '';
+
+    console.log(titleText)
+
+    function type() {
+      const char = titleText[ctr++];
+      const text = titleText.slice(0,ctr);
+
+      title.innerHTML = text + `<div class="blinker"></div>`;
+      
+      if (ctr >= titleText.length) {
+        return;
+      }
+
+      if (char === "<") {
+        isTag = true;
+      }
+
+      if (char === ">") {
+        isTag = false;
+      }
+
+      if (isTag) {
+        return type();
+      }
+
+      setTimeout(type, 80);
+    }
+
+    type();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const headerHtml = `<div>
       <nav>
@@ -21,6 +57,7 @@
   
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
+    const title = document.querySelector("span.heading");
   
     if (header) {
       document.querySelector("header").innerHTML = headerHtml;
@@ -28,7 +65,12 @@
   
     if (footer) {
       document.querySelector("footer").innerHTML = footerHtml;
-    }  
+    }
+
+    if (title) {
+      typeAnimation(title);
+    }
+    
   });
   
 })();

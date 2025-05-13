@@ -89,8 +89,7 @@ h6 {
 }
 
 p, 
-div, 
-span {
+div {
   font-family: var(--font-family-base);
 }
 
@@ -321,14 +320,6 @@ footer {
   margin: 2.5rem 0px;
 }
 
-/* .terminal_emulator__field {
-  display: inline-block;
-  min-width: 1em;
-  min-height: 1.5em;
-  box-sizing: border-box;
-  overflow: hidden;
-} */
-
 .footer-icons {
   width: 25px;
 }
@@ -336,4 +327,18 @@ footer {
 img.avatar {
   width: 250px;
   border-radius: 50px;
+}
+
+.blinker {
+  border-left: 7px solid white;
+  animation: blinker 0.9s steps(2, start) infinite;
+  margin-left: 2px;
+  height: 18px;
+  display: inline-block;
+}
+
+@keyframes blinker {
+  to {
+    visibility: hidden;
+  }
 }
