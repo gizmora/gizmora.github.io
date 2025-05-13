@@ -342,3 +342,7 @@ img.avatar {
     visibility: hidden;
   }
 }
+
+.active {
+  color: white;
+}

@@ -35,14 +35,27 @@
     type();
   }
 
+  const setActiveLink = function () {
+    const currPath = window.location.pathname;
+    console.log(currPath)
+
+    if (currPath.includes('/about')) {
+      document.querySelector('a#about').classList.add('active');
+    } else if (currPath.includes('/projects')) {
+      document.querySelector('a#projects').classList.add('active');
+    } else if (currPath.includes('/now')) {
+      document.querySelector('a#now').classList.add('active');
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const headerHtml = `<div>
       <nav>
         <a href="/"><span>gizmora</span></a>
         <ul>
-          <li><a href="/about/">about</a></li>
-          <li><a href="/projects/">projects</a></li>
-          <li><a href="/now/">/now</a></li>
+          <li><a href="/about/" id="about">about</a></li>
+          <li><a href="/projects/" id="projects">projects</a></li>
+          <li><a href="/now/" id="now">/now</a></li>
         </ul>
       </nav>
     </div>`;
@@ -70,7 +83,8 @@
     if (title) {
       typeAnimation(title);
     }
-    
+
+    setActiveLink();
   });
   
 })();
