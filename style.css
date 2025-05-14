@@ -314,7 +314,7 @@ footer {
   }
 }
 
-.title {
+div.title {
   position: relative;
   padding-right: 1rem;
   margin: 2.5rem 0px;
