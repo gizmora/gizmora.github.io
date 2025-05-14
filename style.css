@@ -98,6 +98,11 @@ p {
   margin: 2rem 0rem;
 }
 
+p,
+span {
+  line-height: 180%;;
+}
+
 a {
   color: var(--link-color);
 }
@@ -196,16 +201,12 @@ footer {
 }
 
 .levels {
-  display: flex;
-  flex-direction: row;
-  column-gap: 8px;
+  span {
+    margin-right: 10px;
 
-  .title + .level {
-    margin-left: 12px;
-  }
-
-  li {
-    padding-left: 10px;
+    &.sub {
+      font-size: var(--font-size-sm);
+    }
   }
 }
 
@@ -214,7 +215,6 @@ footer {
   font-size: var(--font-size-sm);
   word-break: break-word;
   color: #7e7e7e;
-  display: flex;
   align-items: baseline;
   position: relative;
   padding-left: 14px;
@@ -307,7 +307,7 @@ footer {
 .area {
   font-weight: bold;
   margin-bottom: 8px;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 
   &.spacer {
     margin-top: 12px;
@@ -345,4 +345,12 @@ img.avatar {
 
 .active {
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  #technologies {
+    ul {
+      column-count: 2;
+    }
+  }
 }
