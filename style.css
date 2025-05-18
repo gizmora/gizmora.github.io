@@ -42,6 +42,21 @@
   }
 }
 
+[data-theme="dark"] {
+  --theme-primary: #64b5f6;
+  --theme-secondary: #9e9e9e;
+  --theme-background: #121212;
+  --theme-text: #e0e0e0;
+  --theme-border: #424242;
+}
+
+[data-theme="light"] {
+  --theme-primary: #1976d2;       /* A bolder blue for visibility on light backgrounds */
+  --theme-secondary: #616161;     /* A medium gray for contrast */
+  --theme-background: #ffffff;    /* White background */
+  --theme-text: #212121;          /* Dark text for readability */
+  --theme-border: #e0e0e0;        /* Light gray border */
+}
 
 body {
   background-color: var(--theme-background);
