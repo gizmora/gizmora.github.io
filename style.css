@@ -29,6 +29,8 @@
   --layout-max-width: 40rem;
 
   --link-color: #6eb8ff;
+  --active-color: black;
+  --blinker-color: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +41,8 @@
     --theme-background: #121212;
     --theme-text: #e0e0e0;
     --theme-border: #424242;
+    --active-color: white;
+    --blinker-color: white;
   }
 }
 
@@ -48,14 +52,18 @@
   --theme-background: #121212;
   --theme-text: #e0e0e0;
   --theme-border: #424242;
+  --active-color: white;
+  --blinker-color: white;
 }
 
 [data-theme="light"] {
-  --theme-primary: #1976d2;       /* A bolder blue for visibility on light backgrounds */
-  --theme-secondary: #616161;     /* A medium gray for contrast */
-  --theme-background: #ffffff;    /* White background */
-  --theme-text: #212121;          /* Dark text for readability */
-  --theme-border: #e0e0e0;        /* Light gray border */
+  --theme-primary: #1976d2;
+  --theme-secondary: #616161;
+  --theme-background: #ffffff;
+  --theme-text: #212121;
+  --theme-border: #e0e0e0;
+  --active-color: black;
+  --blinker-color: black;
 }
 
 body {
@@ -161,7 +169,7 @@ header, footer {
 
     span {
       font-size: 1.25rem;
-      color: white;
+      color: var(--active-color);
     }
 
     span:hover {
@@ -170,7 +178,7 @@ header, footer {
   }
 
   a:hover {
-    color: white;
+    color: var(--active-color);
   }
 
   ul {
@@ -345,7 +353,7 @@ img.avatar {
 }
 
 .blinker {
-  border-left: 7px solid white;
+  border-left: 7px solid var(--blinker-color);
   animation: blinker 0.9s steps(2, start) infinite;
   margin-left: 2px;
   height: 18px;
@@ -359,13 +367,22 @@ img.avatar {
 }
 
 .active {
-  color: white;
+  color: var(--active-color);
 }
 
 @media screen and (max-width: 600px) {
   #technologies {
     ul {
       column-count: 2;
+    }
+  }
+
+  .projects-wrapper {
+    img {
+      width: 80%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out; 
+      margin: 5px 0px;
     }
   }
 }
