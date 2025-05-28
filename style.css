@@ -347,17 +347,17 @@ div.title {
   width: 25px;
 }
 
-img.avatar {
-  width: 250px;
-  border-radius: 50px;
-}
-
 .blinker {
   border-left: 7px solid var(--blinker-color);
   animation: blinker 0.9s steps(2, start) infinite;
   margin-left: 2px;
   height: 18px;
   display: inline-block;
+}
+
+img.avatar {
+  width: 150px;
+  border-radius: 100px;
 }
 
 @keyframes blinker {
@@ -385,4 +385,13 @@ img.avatar {
       margin: 5px 0px;
     }
   }
+}
+
+button#theme-toggle {
+  background-color: unset;
+  color: var(--active-color);
+  padding: 0;
+  box-shadow: none;
+  border: unset;
+  cursor: pointer;
 }

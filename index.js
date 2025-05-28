@@ -49,18 +49,21 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    const isRoot = window.location.pathname === '/' || window.location.pathname === '/index.html' ? true : false;
+
     const headerHtml = `<div>
       <nav>
-        <a href="/"><span>gizmora</span></a>
+        ${ isRoot ? '' : '<a href="/"><span>gizmora</span></a>' }
         <ul>
           <li><a href="/about/" id="about">about</a></li>
           <li><a href="/projects/" id="projects">projects</a></li>
           <li><a href="/now/" id="now">/now</a></li>
+          <li><button id="theme-toggle">&#9728;</button></li>
         </ul>
       </nav>
     </div>`;
-  
-    const footerHtml = `<div>
+
+    const footerHtml = isRoot ? '' : `<div>
       <div class="links">
         <p><a href="https://github.com/gizmora" target="_blank"><img src="/public/assets/github_white.png" class="footer-icons"></a></p>
         <p><a href="/about">about</a> · <a href="/projects">projects</a> · <a href="/now">/now</a></p>
