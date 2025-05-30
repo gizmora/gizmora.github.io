@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             { "name": "PM2", "level": "novice" },
             { "name": "Docker", "level": "novice" },
             { "name": "Virtual Box", "level": "novice" },
-            { "name": "Amazon Web Services(S3,SQS)", "level": "competent" },
+            { "name": "AWS(S3,SQS)", "level": "competent" },
             { "name": "Firebase", "level": "recreational" },
-            { "name": "Google Cloud Platform(GCP)", "level": "competent" }
+            { "name": "GCP(Cloud Run, Artifact Registry)", "level": "competent" }
           ]
         },
         {
@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
             { "name": "Angular", "level": "proficient" },
             { "name": "jQuery", "level": "proficient" },
             { "name": "Bootstrap", "level": "proficient" },
-            { "name": "Handlebars", "level": "novice" }
+            { "name": "Handlebars", "level": "novice" },
+            { "name": "TailwindCSS", "level": "proficient" }
           ]
         },
         {
