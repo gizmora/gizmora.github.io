@@ -428,8 +428,8 @@ div.profile {
     p {
       position: absolute;
       white-space: nowrap;
-      left: -27px;
-      top: 58px;
+      left: -45px;
+      top: 40px;
       color: var(--theme-secondary)
     }
   }
@@ -451,7 +451,8 @@ div.profile {
     opacity: 1;
     transition: .75s ease;
     position: absolute;
-    top: -140px;
+    top: -150px;
+    left: -14px;
   }
 }
 
