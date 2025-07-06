@@ -50,16 +50,29 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const isRoot = window.location.pathname === '/' || window.location.pathname === '/index.html' ? true : false;
+    const profile = ``
 
     const headerHtml = `<div>
       <nav>
-        ${ isRoot ? '' : '<a href="/"><span>gizmora</span></a>' }
+        <div class="profile">
+          <div class="bio ${isRoot ? 'expanded' : 'minimize'}">
+            <a href="/">
+              <img src="public/assets/avatar.jpeg" alt="My Avatar" class="avatar">
+            </a>
+            <h1 class="username">
+              <a href="/">@gizmora</a>
+            </h1>
+            <p class="current">web developer @ <span>cognizant</span></p>
+          </div>
+        </div>
         <ul>
           <li><a href="/about/" id="about">about</a></li>
           <li><a href="/projects/" id="projects">projects</a></li>
           <li><a href="/now/" id="now">/now</a></li>
-          <li><button id="theme-toggle">&#9728;</button></li>
         </ul>
+        <div class="buttons">
+          <button id="theme-toggle">&#9728;</button>
+        </div>
       </nav>
     </div>`;
 

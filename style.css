@@ -8,7 +8,7 @@
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.3125rem;
   --font-size-2xl: 1.5rem;
-  --font-size-3xl: 2.652rem;
+  --font-size-3xl: 2.0rem;
   --font-size-4xl: 4rem;
   --font-weight-bold: 700;
 
@@ -152,6 +152,7 @@ header {
     display: flex;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
   }
 
   ul {
@@ -164,7 +165,7 @@ header {
 }
 
 header, footer {
-  a {
+  li > a {
     color: var(--theme-secondary);
 
     span {
@@ -355,11 +356,6 @@ div.title {
   display: inline-block;
 }
 
-img.avatar {
-  width: 150px;
-  border-radius: 100px;
-}
-
 @keyframes blinker {
   to {
     visibility: hidden;
@@ -394,4 +390,73 @@ button#theme-toggle {
   box-shadow: none;
   border: unset;
   cursor: pointer;
+}
+
+div.profile {
+  width: 25%;
+  height: 40px;
+
+  .bio {
+    width: 132px;
+    position: absolute;
+    transition: 1.5s ease;
+    transition-delay: .4s;
+    transform: translate(-66px);
+
+    &.expanded {
+      left: 50%;
+      top: calc(50vh - 43px);
+
+      .username {
+        transform: scale(1.65);
+      }
+    }
+
+    &.minimize {
+      top: 0;
+      left: 62px;
+
+      img.avatar {
+        opacity: 0;
+      }
+      
+      p {
+        opacity: 0;
+      }
+    }
+
+    p {
+      position: absolute;
+      white-space: nowrap;
+      left: -27px;
+      top: 58px;
+      color: var(--theme-secondary)
+    }
+  }
+
+  .username {
+    font-family: var(--font-family-base);
+    display: inline-block;
+    font-size: var(--font-size-2xl);
+
+    a {
+      color: white;
+    }
+  }
+
+  img.avatar {
+    height: 150px;
+    border-radius: 100px;
+    display: block;
+    opacity: 1;
+    transition: .75s ease;
+    position: absolute;
+    top: -140px;
+  }
+}
+
+div.buttons {
+  width: 28%;
+  display: flex;
+  justify-content: flex-end;
 }
