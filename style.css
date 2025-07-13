@@ -410,6 +410,14 @@ div.profile {
       .username {
         transform: scale(1.65);
       }
+
+      img.avatar {
+        transition-delay: 2s;
+      }
+
+      p.current {
+        transition-delay: 2s;
+      }
     }
 
     &.minimize {
@@ -420,7 +428,7 @@ div.profile {
         opacity: 0;
       }
       
-      p {
+      p.current {
         opacity: 0;
       }
     }

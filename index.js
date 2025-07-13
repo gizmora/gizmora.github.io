@@ -1,4 +1,5 @@
 (() => {
+  let isRoot = false;
   const typeAnimation = function (title) {
     let ctr = 0;
     let isTag = false;
@@ -35,40 +36,100 @@
     type();
   }
 
-  const setActiveLink = function () {
-    const currPath = window.location.pathname;
-    console.log(currPath)
-
-    if (currPath.includes('/about')) {
+  const setActiveLink = function (page) {
+    if (page.includes('/about')) {
       document.querySelector('a#about').classList.add('active');
-    } else if (currPath.includes('/projects')) {
+    } else if (page.includes('/projects')) {
       document.querySelector('a#projects').classList.add('active');
-    } else if (currPath.includes('/now')) {
+    } else if (page.includes('/now')) {
       document.querySelector('a#now').classList.add('active');
     }
   }
 
+  async function loadPage(page) {
+    const app = document.getElementById('app');
+    const routes = {
+      '': 'index.html',
+      home: 'index.html',
+      about: 'pages/about.html',
+      projects: 'pages/projects.html',
+      now: 'pages/now.html'
+    };
+
+    const path = routes[page] || routes['home'];
+    setActiveLink(page);
+
+    try {
+      const res = await fetch(path);
+      const html = await res.text();
+      
+      // Optional: transition effect
+      app.classList.add('fade-out');
+      setTimeout(() => {
+        app.innerHTML = html;
+        app.classList.remove('fade-out');
+        app.classList.add('fade-in');
+
+        if (route.script) {
+          const existingScript = document.getElementById('page-script');
+          if (existingScript) existingScript.remove();
+
+          const script = document.createElement('script');
+          script.src = route.script;
+          script.id = 'page-script';
+          document.body.appendChild(script);
+        }
+      }, 200);
+      
+      setTimeout(() => app.classList.remove('fade-in'), 600);
+
+    } catch (e) {
+      app.innerHTML = `<h2>Page not found</h2>`;
+    }
+  }
+
+  window.addEventListener('hashchange', () => {
+    const page = location.hash.replace('#', '') || 'home';
+    const bio = document.querySelector('div.bio');
+    isRoot = page === 'home' ? true : false;
+    console.log(isRoot)
+
+    if (bio && isRoot) {
+      if (bio.classList.contains('minimize')) {
+        bio.classList.replace('minimize', 'expanded');
+      }
+    } else {
+      if (bio.classList.contains('expanded')) {
+        bio.classList.replace('expanded', 'minimize');
+      }
+    }
+
+
+    loadPage(page);
+  });
+
   document.addEventListener("DOMContentLoaded", function () {
-    const isRoot = window.location.pathname === '/' || window.location.pathname === '/index.html' ? true : false;
-    const profile = ``
+    const page = location.hash.replace('#', '') || 'home';
+    isRoot = page === 'home' ? true : false;
+    console.log(isRoot)
 
     const headerHtml = `<div>
       <nav>
         <div class="profile">
           <div class="bio ${isRoot ? 'expanded' : 'minimize'}">
-            <a href="/">
+            <a href="#home">
               <img src="public/assets/avatar.jpeg" alt="My Avatar" class="avatar">
             </a>
             <h1 class="username">
-              <a href="/">@gizmora</a>
+              <a href="#home">@gizmora</a>
             </h1>
             <p class="current">web developer @ <span>cognizant</span></p>
           </div>
         </div>
         <ul>
-          <li><a href="/about/" id="about">about</a></li>
-          <li><a href="/projects/" id="projects">projects</a></li>
-          <li><a href="/now/" id="now">/now</a></li>
+          <li><a href="#about" id="about">about</a></li>
+          <li><a href="#projects" id="projects">projects</a></li>
+          <li><a href="#now" id="now">/now</a></li>
         </ul>
         <div class="buttons">
           <button id="theme-toggle">&#9728;</button>
@@ -100,7 +161,7 @@
       typeAnimation(title);
     }
 
-    setActiveLink();
+    setActiveLink(page);
   });
   
 })();
