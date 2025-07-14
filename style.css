@@ -1,5 +1,7 @@
 :root {
-  --font-family-base: "Noto Sans", sans-serif;
+  --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   --font-family-heading: 'Montserrat', sans-serif;
   --font-size-base: 16px;
   --font-size-xs: 0.75rem;
@@ -195,6 +197,13 @@ header, footer {
 main {
   max-width: var(--layout-max-width);
   margin: auto;
+  transition: all 1.5s ease;
+  transition-delay: .4s;
+  opacity: 0;
+
+  &.other {
+    opacity: 1;
+  }
 }
 
 footer {
@@ -411,10 +420,7 @@ div.profile {
         transform: scale(1.65);
       }
 
-      img.avatar {
-        transition-delay: 2s;
-      }
-
+      img.avatar,
       p.current {
         transition-delay: 2s;
       }
@@ -431,6 +437,10 @@ div.profile {
       p.current {
         opacity: 0;
       }
+
+      .username {
+        transform: scale(1);
+      }
     }
 
     p {
@@ -446,9 +456,12 @@ div.profile {
     font-family: var(--font-family-base);
     display: inline-block;
     font-size: var(--font-size-2xl);
+    transition: 1.5s ease;
+    transform: scale(1);
 
     a {
       color: white;
+      transition: .25s all;
     }
   }
 

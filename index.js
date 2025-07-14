@@ -49,35 +49,44 @@
   async function loadPage(page) {
     const app = document.getElementById('app');
     const routes = {
-      '': 'index.html',
-      home: 'index.html',
-      about: 'pages/about.html',
-      projects: 'pages/projects.html',
-      now: 'pages/now.html'
+      '': { html: 'index.html' },
+      'home': { html: 'index.html' },
+      'about': { html: 'pages/about.html' },
+      'projects': { html: 'pages/projects.html', script: '/js/projects.js' },
+      'now': { html: 'pages/now.html' }
     };
 
     const path = routes[page] || routes['home'];
     setActiveLink(page);
 
     try {
-      const res = await fetch(path);
+      const res = await fetch(path.html);
       const html = await res.text();
       
-      // Optional: transition effect
       app.classList.add('fade-out');
+      if (page !== 'home') {
+        app.classList.remove('home');
+        app.classList.add('other');
+      } else {
+        app.classList.remove('other');
+        app.classList.add('home');
+      }
+      
       setTimeout(() => {
         app.innerHTML = html;
         app.classList.remove('fade-out');
         app.classList.add('fade-in');
 
-        if (route.script) {
+        if (path.script) {
           const existingScript = document.getElementById('page-script');
           if (existingScript) existingScript.remove();
 
-          const script = document.createElement('script');
-          script.src = route.script;
-          script.id = 'page-script';
-          document.body.appendChild(script);
+          if (path.script) {
+            const script = document.createElement('script');
+            script.src = path.script;
+            script.id = 'page-script';
+            document.body.appendChild(script);
+          }
         }
       }, 200);
       
@@ -92,7 +101,6 @@
     const page = location.hash.replace('#', '') || 'home';
     const bio = document.querySelector('div.bio');
     isRoot = page === 'home' ? true : false;
-    console.log(isRoot)
 
     if (bio && isRoot) {
       if (bio.classList.contains('minimize')) {
@@ -111,7 +119,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     const page = location.hash.replace('#', '') || 'home';
     isRoot = page === 'home' ? true : false;
-    console.log(isRoot)
 
     const headerHtml = `<div>
       <nav>
@@ -153,15 +160,16 @@
       document.querySelector("header").innerHTML = headerHtml;
     }
   
-    if (footer) {
-      document.querySelector("footer").innerHTML = footerHtml;
-    }
+    // if (footer) {
+    //   document.querySelector("footer").innerHTML = footerHtml;
+    // }
 
     if (title) {
       typeAnimation(title);
     }
 
     setActiveLink(page);
+    loadPage(page);
   });
   
 })();
