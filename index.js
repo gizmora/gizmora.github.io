@@ -100,6 +100,7 @@
   const toggleTheme = function () {
     const toggleBtn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("theme");
+    const root = document.documentElement;
     if (savedTheme) {
       root.setAttribute("data-theme", savedTheme);
     }
