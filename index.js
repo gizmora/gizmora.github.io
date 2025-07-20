@@ -97,6 +97,24 @@
     }
   }
 
+  const toggleTheme = function () {
+    const toggleBtn = document.getElementById("theme-toggle");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      root.setAttribute("data-theme", savedTheme);
+    }
+
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+    }
+  }
+
   window.addEventListener('hashchange', () => {
     const page = location.hash.replace('#', '') || 'home';
     const bio = document.querySelector('div.bio');
@@ -170,6 +188,7 @@
 
     setActiveLink(page);
     loadPage(page);
+    toggleTheme();
   });
   
 })();
