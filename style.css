@@ -376,23 +376,6 @@ div.title {
   color: var(--active-color);
 }
 
-@media screen and (max-width: 600px) {
-  #technologies {
-    ul {
-      column-count: 2;
-    }
-  }
-
-  .projects-wrapper {
-    img {
-      width: 80%;
-      object-fit: cover;
-      transition: transform 0.5s ease-in-out; 
-      margin: 5px 0px;
-    }
-  }
-}
-
 button#theme-toggle {
   background-color: unset;
   color: var(--active-color);
@@ -447,7 +430,7 @@ div.profile {
     p {
       position: absolute;
       white-space: nowrap;
-      left: -45px;
+      left: -10px;
       top: 40px;
       color: var(--theme-secondary)
     }
@@ -482,4 +465,25 @@ div.buttons {
   width: 28%;
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  #technologies {
+    ul {
+      column-count: 2;
+    }
+  }
+
+  .projects-wrapper {
+    img {
+      width: 80%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out; 
+      margin: 5px 0px;
+    }
+  }
+
+  div.buttons {
+    width: 12%;
+  }
 }

@@ -149,7 +149,7 @@
             <h1 class="username">
               <a href="#home">@gizmora</a>
             </h1>
-            <p class="current">web developer @ <span>cognizant</span></p>
+            <p class="current">web dev & design</p>
           </div>
         </div>
         <ul>
@@ -166,7 +166,7 @@
     const footerHtml = isRoot ? '' : `<div>
       <div class="links">
         <p><a href="https://github.com/gizmora" target="_blank"><img src="/public/assets/github_white.png" class="footer-icons"></a></p>
-        <p><a href="/about">about</a> · <a href="/projects">projects</a> · <a href="/now">/now</a></p>
+        <p><a href="#about">about</a> · <a href="#projects">projects</a> · <a href="#now">/now</a></p>
         <p class="sub">&copy; ${new Date().getFullYear()} Grace Irene Mora</p>
       </div>
     </div>`;
@@ -179,9 +179,9 @@
       document.querySelector("header").innerHTML = headerHtml;
     }
   
-    // if (footer) {
-    //   document.querySelector("footer").innerHTML = footerHtml;
-    // }
+    if (footer) {
+      document.querySelector("footer").innerHTML = footerHtml;
+    }
 
     if (title) {
       typeAnimation(title);
