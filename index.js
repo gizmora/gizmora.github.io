@@ -179,9 +179,9 @@
       document.querySelector("header").innerHTML = headerHtml;
     }
   
-    if (footer) {
-      document.querySelector("footer").innerHTML = footerHtml;
-    }
+    // if (footer) {
+    //   document.querySelector("footer").innerHTML = footerHtml;
+    // }
 
     if (title) {
       typeAnimation(title);
