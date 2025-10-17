@@ -468,6 +468,16 @@ div.buttons {
   justify-content: flex-end;
 }
 
+figure.project-preview {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+
+  h3 {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #technologies {
     ul {
