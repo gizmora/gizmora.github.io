@@ -476,6 +476,10 @@ figure.project-preview {
   h3 {
     margin: 0;
   }
+
+  figcaption > p.sub {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
