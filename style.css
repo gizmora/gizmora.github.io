@@ -501,4 +501,14 @@ figure.project-preview {
   div.buttons {
     width: 12%;
   }
+
+  figure.project-preview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
