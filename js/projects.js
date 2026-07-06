@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname;
+(() => {
+  const path = location.hash.replace('#', '') || 'home';
+
 
   if (path.includes('projects')) {
     const skillsContainer = document.getElementById('technologies');
@@ -124,4 +125,5 @@ document.addEventListener("DOMContentLoaded", function () {
       skillsContainer.appendChild(sectionList);
     }
   }
-});
+
+})()
